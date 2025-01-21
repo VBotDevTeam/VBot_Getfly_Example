@@ -1,0 +1,63 @@
+{
+  "presets": [
+    // "@babel/preset-env",
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    "@babel/typescript",
+    [
+      "@babel/preset-env",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "plugins": [
+    "@emotion",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta",
+    "@babel/plugin-proposal-json-strings",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-proposal-function-sent",
+    "@babel/plugin-proposal-export-namespace-from",
+    "@babel/plugin-proposal-numeric-separator",
+    "@babel/plugin-proposal-throw-expressions",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-modules-commonjs",
+    [
+      "@babel/plugin-proposal-private-methods",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-private-property-in-object",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@utils": "./src/utils",
+          "@store": "./src/Store.ts",
+          "@types": "./src/types",
+          "@services": "./src/services",
+          "@public": "./src/public",
+          "@reducers": "./src/reducers",
+          "@components": "./src/components",
+          "@ui": "./src/UI",
+          "components": "./src/components",
+          "ui": "./src/UI",
+          "utils": "./src/utils",
+          "services": "./src/services",
+          "public": "./src/public",
+          "reducers": "./src/reducers",
+          "@components-v2": "./src/components-v2"
+        }
+      }
+    ]
+  ]
+}
